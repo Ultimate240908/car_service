@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<img src="автомастерская.jpeg" alt="план мастерской" class="center-img" />
+
+<style>
+.center-img {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+<p data-tooltip="Всплывающая подсказка сообщает о чём-то многозначном и полезном...">
+   Наведи сюда курсор.
+</p>
+
+</head>
+<body>
+
+<meta charset="utf-8">
+  <title>:hover</title>
+  <style>
+   [data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 300px; /* Ширина подсказки */
+    left: 15; top: 20; /* Положение подсказки */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1;
+    top: 2em;
+   }
+  </style>
+
+</body>
+</html>
